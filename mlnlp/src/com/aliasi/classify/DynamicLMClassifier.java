@@ -311,8 +311,9 @@ public class DynamicLMClassifier<L extends LanguageModel.Dynamic>
                            int maxCharNGram) {
 
         NGramProcessLM[] lms = new NGramProcessLM[categories.length];
-        for (int i = 0; i < lms.length; ++i)
+        for (int i = 0; i < lms.length; ++i){
             lms[i] = new NGramProcessLM(maxCharNGram);
+        }
 
         return new DynamicLMClassifier<NGramProcessLM>(categories,lms);
     }
